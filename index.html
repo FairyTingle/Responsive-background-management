@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1 , user-scalable=no">
+    <title>响应式后台管理</title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/bootstrap-theme.css"/>
+    <link rel="stylesheet" href="css/animate.css"/>
+    <link rel="stylesheet" href="css/my.css"/>
+</head>
+<body>
+
+<!--导航-->
+<nav class="navbar navbar-default">
+    <div class="container">
+        <!--小屏幕导航按钮和logo-->
+        <div class="navbar-header">
+
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span><!--往按钮里加横线--->
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="index.html" class="navbar-brand">后台禁地</a>
+        </div>
+        <!--小屏幕导航按钮和logo-->
+        <!--导航-->
+        <div class="navbar-collapse collapse">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="index.html"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;后台首页</a></li>
+                <li><a href="user_list.html"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;用户管理</a></li>
+                <li><a href="content.html"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;内容管理</a></li>
+                <li class="navbar-right"><a href="#"><span class="glyphicon glyphicon-off"></span>&nbsp;&nbsp;退出</a></li>
+                <li class="dropdown navbar-right" >
+                    <a id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        admin
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                        <li><a href="index.html"><span class="glyphicon glyphicon-eye-open"></span>&nbsp;&nbsp;个人主页</a></li>
+                        <li><a href="index.html"><span class="glyphicon glyphicon-comment"></span>&nbsp;&nbsp;消息</a></li>
+                        <li><a href="index.html"><span class="glyphicon glyphicon-wrench"></span>&nbsp;&nbsp;个人设置</a></li>
+                        <li><a href="index.html"><span class="glyphicon glyphicon-remove-sign"></span>&nbsp;&nbsp;注销</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!--导航-->
+    </div>
+</nav>
+<!--导航-->
+
+<div class="container " style="min-width: 450px">
+    <!--警告框-->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="alert alert-info alert-dismissible wow slideInLeft" role="alert">
+                <!--关闭警告X data-dismiss="alert"-->
+                <button type="button" class="close " data-dismiss="alert" ><span aria-hidden="true">×</span></button>
+                <h4>congratulation！</h4>
+                <p><strong>Heads up!</strong>This alert needs your attention, but it's not super important.</p>
+                <!--文档中就利用p给按钮加上边距-->
+                <p>
+                    <button type="button" class="btn btn-info">Heads up!</button>
+                    <button type="button" class="btn btn-danger"data-dismiss="alert">关闭</button>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--**********面板panel********************-->
+    <div class="col-md-6 well">
+        <!--面板头-->
+        <div class="panel panel-danger">
+            <div class="panel-heading"><h3 class="panel-title" style="font-weight: bold">网站数据统计</h3></div>
+            <!--面板身体-->
+            <div class="panel-body">
+                <table class="table table-hover">
+                    <!--表头-->
+                    <thead>
+                        <tr>
+                            <th>统计</th>
+                            <th>今日</th>
+                            <th>昨日</th>
+                        </tr>
+                    </thead>
+                    <!--表内容-->
+                    <tbody>
+                        <tr>
+                            <th scope="row">新进会员</th>
+                            <td>2056</td>
+                            <td>496</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">新进付费会员</th>
+                            <td>300</td>
+                            <td>236</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">游客访问量</th>
+                            <td>217840</td>
+                            <td>15536</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">广告点击数</th>
+                            <td>1760</td>
+                            <td>2110</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <strong><h3 class="panel-title" style="font-weight: bold">最新热帖</h3></strong><br/>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <a href="index.html"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;地球即将要爆炸了！&nbsp;&nbsp;<span class="label label-warning">New</span><small class="pull-right">昨日</small></a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="index.html"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;这十本书不看就out了！&nbsp;&nbsp;<span class="label label-danger">New</span><small class="pull-right">昨日</small></a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="index.html"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;地表最强的战斗民族！&nbsp;&nbsp;<span class="label label-danger">New</span><small class="pull-right">昨日</small></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="panel-footer">仅统计高峰期流量</div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="jumbotron">
+            <h1>警告！</h1>
+            <p>您的网站面临巨大风险，需要立刻升级！</p>
+            <p><a class="btn btn-danger btn-lg" href="#" role="button">立刻升级</a></p>
+        </div>
+    </div>
+    <div class="col-md-6 well-sm">
+        <div class="panel panel-default">
+            <div class="panel-heading">网友最新留言<span class="badge">4262</span></div>
+            <div class="panel-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <a href="index.html">
+                            <span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;地表上哪个民族最浪&nbsp;&nbsp;<span class="label label-danger">New</span><small class="pull-right">昨日</small></a>
+                        <!--pull-right-->
+                    </li>
+                    <li class="list-group-item">
+                        <a href="index.html"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;怎么能变得头硬！&nbsp;&nbsp;<span class="label label-danger">New</span><small class="pull-right">昨日</small></a>
+                    </li>
+                </ul>
+                <div class="panel-footer">昨日统计至今</div>
+            </div>
+        </div>
+    </div>
+<!--*************图表*************************-->
+    <div class="col-md-6 ">
+        <div class="panel panel-warning">
+            <div class="panel-heading">一周访客统计</div>
+            <div class="panel-body">
+                <canvas id="canvas1" class="col-md-12"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 well">
+        <div class="panel panel-warning panel-collapse">
+            <div class="panel-heading">一周流量统计</div>
+            <div class="panel-body">
+                <canvas id="canvas3" class="col-md-12"></canvas>
+            </div>
+        </div>
+
+    </div>
+    <!--************进度条*******************-->
+    <div class="col-md-12">
+        <div class="panel panel-danger">
+            <div class="panel-heading">服务器状态</div>
+            <div class="panel-body">
+                <p>内存使用率：40%</p>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success progress-bar-striped active"  style="width: 36%">36%</div>
+                </div>
+                <p>数据库使用率：2%</p>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em; width: 2%;">2%</div>
+                </div>
+                <p>磁盘使用率：60%</p>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 52%">52%</div>
+                </div>
+                <p>CPU使用率：72%</p>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em; width: 2%;">safe</div>
+                    <div class="progress-bar progress-bar-success " role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 30%">good</div>
+                    <div class="progress-bar progress-bar-warning  " role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 20%">warning</div>
+                    <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 20%">danger</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--*******************************-->
+    <div class="col-md-12 well" >
+        <div class="panel panel-info">
+            <div class="panel-heading">日程</div>
+            <div class="panel-body">
+                <div class="col-md-7">
+                    <div class="well  wow slideInLeft ">1.对网站进行升级</div>
+                    <div class="well wow slideInLeft">2.完善网站功能</div>
+                    <div class="well wow slideInLeft">3.修补剩余漏洞</div>
+                    <div class="well wow slideInLeft">4.对用户进行反馈</div>
+                    <div class="well wow slideInLeft">5.加入一些新特性</div>
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination">
+                            <li>
+                                <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li>
+                                <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-5">
+                    <form action="#">
+                        <div class="form-group">
+                            <label for="text1">添加计划</label>
+                            <textarea class="form-control" id="text1" rows="5" cols="10" placeholder="请输入内容"></textarea>
+                            <p><button type="submit" class="btn btn-info  btn-block" style="border-radius:0px">添加</button></p>
+                        </div>
+                    </form>
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">联系方式</div>
+                        <div class="panel-body">
+                            <address>
+                                <ul class="list-group">
+                                    <li class="list-group-item">地址：<span class="glyphicon glyphicon-map-marker"></span>&nbsp;&nbsp;地球村村口小桥</li>
+                                    <li class="list-group-item">邮箱：<span class="glyphicon glyphicon-send"></span>&nbsp;&nbsp;linkxieshengkai@gmail.com</li>
+                                    <li class="list-group-item">电话：<span class="glyphicon glyphicon-comment"></span>&nbsp;&nbsp;18967862324</li>
+                                </ul>
+                            </address>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--footer-->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p>
+                    Copyright&nbsp;©&nbsp;2017-2019&nbsp;&nbsp;www.share.com&nbsp;All Rights Reserved&nbsp;备案号：浙ICP备13464270号-6
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--footer-->
+
+
+
+
+<script src="js/jquery.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/Chart.js"></script>
+<script src="js/myChart.js"></script>
+<script> new WOW().init();</script>
+
+</body>
+</html>

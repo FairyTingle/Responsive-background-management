@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1 , user-scalable=no">
+    <title>响应式后台管理</title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/bootstrap-theme.css"/>
+    <link rel="stylesheet" href="css/animate.css"/>
+    <link rel="stylesheet" href="css/my.css"/>
+</head>
+<body>
+
+<!--导航-->
+<nav class="navbar navbar-default">
+    <div class="container">
+        <!--小屏幕导航按钮和logo-->
+        <div class="navbar-header">
+
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span><!--往按钮里加横线--->
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="index.html" class="navbar-brand">后台禁地</a>
+        </div>
+        <!--小屏幕导航按钮和logo-->
+        <!--导航-->
+        <div class="navbar-collapse collapse">
+            <ul class="nav nav-tabs">
+                <li ><a href="index.html"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;后台首页</a></li>
+                <li class="active"><a href="user_list.html"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;用户管理</a></li>
+                <li><a href="content.html"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;内容管理</a></li>
+                <li class="navbar-right"><a href="#"><span class="glyphicon glyphicon-off"></span>&nbsp;&nbsp;退出</a></li>
+                <li class="dropdown navbar-right" >
+                    <a id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        admin
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                        <li><a href="index.html"><span class="glyphicon glyphicon-eye-open"></span>&nbsp;&nbsp;个人主页</a></li>
+                        <li><a href="index.html"><span class="glyphicon glyphicon-comment"></span>&nbsp;&nbsp;消息</a></li>
+                        <li><a href="index.html"><span class="glyphicon glyphicon-wrench"></span>&nbsp;&nbsp;个人设置</a></li>
+                        <li><a href="index.html"><span class="glyphicon glyphicon-remove-sign"></span>&nbsp;&nbsp;注销</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!--导航-->
+    </div>
+</nav>
+<!--导航-->
+
+<div class="container" style="min-width: 450px">
+
+    <div class="row">
+        <!--***************************-->
+        <div class="col-md-2">
+            <div class="list-group">
+                <a href="user_list.html" class="list-group-item active list-group-item-info">
+                    <h4 class="list-group-item-heading">用户管理</h4> <p class="list-group-item-text">在此可以查看管理用户</p>
+                </a>
+                <a href="#" class="list-group-item list-group-item-info">
+                    <h4 class="list-group-item-heading">用户搜索</h4> <p class="list-group-item-text">根据用户Id搜索用户相关信息</p>
+                </a>
+                <a href=""class="list-group-item list-group-item-info" data-toggle="modal" data-target="#myModal">
+                    <!--指向modal模态框-->
+                    <h4 class="list-group-item-heading">添加用户</h4> <p class="list-group-item-text">点击添加用户，需管理员权限</p>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-10">
+            <div class="page-header ">
+                <h1>用户管理</h1>
+            </div>
+            <ul class="nav nav-tabs">
+                <li>
+                    <a href="user_list.html">用户列表</a>
+                </li>
+                <li  class="active">
+                    <a href="#">用户搜索</a>
+                </li>
+                <li>
+                    <a href="" role="button" data-toggle="modal" data-target="#myModal">添加用户</a>
+                </li>
+            </ul>
+            <!--/********搜索*************/-->
+            <form action="#" class="user_search wow bounceIn">
+                <div class="form-group">
+                    <label for="name">用户名</label>
+                    <input type="text" id="name" class="form-control" placeholder="请输入用户名">
+                </div>
+                <div class="form-group">
+                    <label for="id">ID</label>
+                    <input type="text" id="id" class="form-control" placeholder="输入用户ID">
+                </div>
+                <div class="form-group">
+                    <label for="yonghuzu">选择用户组</label>
+                    <select id="yonghuzu" class="form-control">
+                        <option>限制会员</option>
+                        <option>新手上路</option>
+                        <option>中级会员</option>
+                        <option>高级会员</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-default">提交</button>
+            </form>
+        </div>
+        </div>
+    </div>
+    <!--******************************-->
+    <!-- Modal模态框 -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <!--关闭模态框data-dismiss="modal"-->
+                    <h4 class="modal-title" id="myModalLabel">添加用户</h4>
+                </div>
+
+                <div class="modal-body">
+                    <form action="#">
+
+                        <div class="form-group">
+                            <label for="addname">用户名</label>
+                            <input type="text" id="addname" class="form-control" placeholder="用户名">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="addpassword">用户密码</label>
+                            <input type="text" id="addpassword" class="form-control" placeholder="请输入用户密码">
+                        </div>
+                        <div class="form-group">
+                            <label for="addpassword1">确认用户密码</label>
+                            <input type="text" id="addpassword1" class="form-control" placeholder="请确认输入用户密码">
+                        </div>
+                        <div class="form-group">
+                            <label for="addemail">请输入用户邮箱</label>
+                            <input type="email" id="addemail" class="form-control" placeholder="请输入用户邮箱">
+                        </div>
+                        <div class="form-group">
+                            <label for="add_user">所属用户组</label>
+
+                            <select id="add_user" class="form-control">
+                                <option>限制会员</option>
+                                <option>新手上路</option>
+                                <option>中级会员</option>
+                                <option>高级会员</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--footer-->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" style="text-align: center">
+                    <p>
+                        Copyright&nbsp;©&nbsp;2017-2019&nbsp;&nbsp;www.share.com&nbsp;All Rights Reserved&nbsp;备案号：浙ICP备13464270号-6
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--footer-->
+
+</div>
+
+
+<script src="js/jquery.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/Chart.js"></script>
+<script> new WOW().init();</script>
+<script src="js/myChart.js"></script>
+</body>
+</html>
